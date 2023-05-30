@@ -32,7 +32,7 @@ export default function Document() {
         {/* - Open Graph tags for social media  */}
         <meta
           property="og:title"
-          content="Marcin Cebula: Full Stack Dev, Indie Hacker and Twitch Streamer"
+          content="Building AirBNB clone in React & Typescript"
         />
         <meta
           property="og:description"
@@ -48,7 +48,7 @@ export default function Document() {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="Marcin Cebula: Full Stack Dev, Indie Hacker and Twitch Streamer"
+          content="Building AirBNB clone in React & Typescript"
         />
         <meta
           name="twitter:description"
