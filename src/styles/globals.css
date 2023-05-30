@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .defaultContainerPadding {
-  @apply px-8;
+  @apply px-6 lg:px-8;
 }
 .hideScrollbar::-webkit-scrollbar {
   display: none;

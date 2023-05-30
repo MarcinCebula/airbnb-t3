@@ -15,6 +15,8 @@ import {
   Bars3Icon,
   HomeModernIcon,
   CurrencyDollarIcon,
+  HeartIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
@@ -34,14 +36,34 @@ export const HomeFeature = () => {
 };
 
 export const Footer = () => (
-  <div className="defaultContainerPadding fixed inset-x-0 bottom-0 flex w-full flex-col space-y-4">
-    <div className="flex flex-row items-center justify-center py-2">
+  <div className="defaultContainerPadding fixed inset-x-0 bottom-0 flex w-full flex-col border-t border-slate-200 lg:space-y-4 lg:border-none">
+    <div className="hidden flex-row items-center justify-center py-2 lg:flex">
       <button className="flex flex-row items-center justify-center space-x-2 rounded-full bg-slate-950 px-4 py-3 text-center text-xs text-white shadow-slate-500 transition-all duration-300 hover:px-5 hover:py-3.5  hover:shadow-lg">
         <span className="font-medium">Show Map</span>
         <MapIcon className="h-4 w-4" />
       </button>
     </div>
-    <div className=" flex flex-row justify-between bg-white py-2">
+
+    {/* Mobile */}
+    <div className=" flex w-full flex-row justify-center space-x-6 bg-white pt-2 lg:hidden">
+      <div className="flex cursor-pointer flex-col items-center justify-center space-y-1 border-b-2 border-white pb-2 text-slate-400 hover:border-slate-500">
+        <MagnifyingGlassIcon className="h-6 w-6" />
+        <span className="text-xs leading-tight">Explore</span>
+      </div>
+      <div className="flex cursor-pointer flex-col items-center justify-center space-y-1 border-b-2 border-white pb-2 text-slate-400 hover:border-slate-500">
+        <HeartIcon className="h-6 w-6" />
+        <span className="text-xs leading-tight">Wishlists</span>
+      </div>
+      <div className="flex cursor-pointer flex-col items-center justify-center space-y-1 border-b-2 border-white pb-2 text-slate-400 hover:border-slate-500">
+        <UserCircleIcon className="h-6 w-6" />
+        <span className="text-xs leading-tight">Log in</span>
+      </div> 
+      
+
+    </div>
+
+    {/* Desktop */}
+    <div className="hidden flex-row justify-between bg-white py-2 lg:flex">
       {/* Left */}
       <div className="font-base flex flex-row items-center space-x-4 text-xs text-slate-500">
         <p>© 2023 Airbnb, Inc.</p>
@@ -108,7 +130,7 @@ export const ContentBody = () => (
               {/* Description */}
               <div className="flex w-full flex-row space-x-1">
                 <div className="flex-1">
-                  <div className="font-bold leading-tight">
+                  <div className="font-bold leading-tight text-sm lg:text-xs">
                     Wansan-gu, Jeonju, South Korea
                   </div>
                   <div className="flex flex-col space-y-0">
@@ -142,7 +164,7 @@ export const ContentBody = () => (
 );
 
 export const SecondaryNavigationMenu = () => (
-  <div className="defaultContainerPadding sticky top-16 z-10 flex h-24 w-full items-end justify-between border-b bg-white">
+  <div className="defaultContainerPadding sticky top-16 z-10 flex h-20 w-full items-end justify-between border-b bg-white lg:h-24">
     <div className="flex w-full flex-row items-center space-x-2">
       <div className="relative flex-1 overflow-hidden">
         <div className="absolute left-0 flex h-full w-auto flex-col items-center bg-white/80 pl-2 pr-4 backdrop-blur-[1px]">
@@ -169,7 +191,7 @@ export const SecondaryNavigationMenu = () => (
           ))}
         </div>
       </div>
-      <div className="mb-4 flex h-full w-auto items-center justify-center pl-2">
+      <div className="mb-4 hidden h-full w-auto items-center justify-center pl-2 lg:flex">
         <button
           type="button"
           className="flex flex-row items-center space-x-2 rounded-lg border border-slate-300 px-3 py-2 shadow-slate-100 hover:shadow-md"
@@ -195,23 +217,23 @@ export const MainNavigationMenu = () => (
       </span>
     </div>
     {/* Center */}
-    <div className="">
-      <div className="flex cursor-pointer flex-row items-center rounded-full border border-slate-300 px-2 py-1 shadow-sm shadow-slate-200 transition-shadow duration-200 hover:shadow-md">
-        <div className="divider-slate-400 flex flex-row divide-x p-2 text-sm text-slate-900">
-          <div className="pl-2 pr-4 font-bold">Anywhere</div>
-          <div className="px-4 font-semibold">Any Week</div>
-          <div className="px-4 text-slate-400">Add guests</div>
-        </div>
-        <button
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-500 text-white"
-          type="button"
-        >
-          <MagnifyingGlassIcon className="h-4 w-4 text-white" />
-        </button>
+
+    <div className="hidden cursor-pointer flex-row items-center rounded-full border border-slate-300 px-2 py-1 shadow-sm shadow-slate-200 transition-shadow duration-200 hover:shadow-md lg:flex">
+      <div className="divider-slate-400 flex flex-row divide-x p-2 text-sm text-slate-900">
+        <div className="pl-2 pr-4 font-bold">Anywhere</div>
+        <div className="px-4 font-semibold">Any Week</div>
+        <div className="px-4 text-slate-400">Add guests</div>
       </div>
+      <button
+        className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-500 text-white"
+        type="button"
+      >
+        <MagnifyingGlassIcon className="h-4 w-4 text-white" />
+      </button>
     </div>
+
     {/* Right */}
-    <div className="flex flex-row items-center space-x-1">
+    <div className="hidden flex-row items-center space-x-1 lg:flex">
       <div className="cursor-pointer rounded-full px-4 py-2 text-sm text-slate-800 hover:bg-stone-100">
         <a className="font-medium tracking-tight" href="#">
           Airbnb your home
@@ -233,7 +255,7 @@ export const MainNavigationMenu = () => (
 );
 
 export const Banner = () => (
-  <div className="defaultContainerPadding flex h-16 w-full items-center justify-between border-b border-slate-200 bg-stone-100 text-sm text-slate-600 ">
+  <div className="defaultContainerPadding hidden h-16 w-full items-center justify-between border-b border-slate-200 bg-stone-100 text-sm text-slate-600 lg:flex">
     <div className="flex flex-row font-sans text-slate-900">
       <span className="text-lg font-semibold tracking-tight">
         Introducing Airbnb Rooms and 50+ features
