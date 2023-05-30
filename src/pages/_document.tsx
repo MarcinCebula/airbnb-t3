@@ -6,15 +6,15 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        {/* <meta
+        <meta
           name="description"
-          content="Welcome to my corner of the web! I'm Marcin, a full stack developer and indie hacker, deeply immersed in the world of code. I write and stream about TypeScript, Next.js, React.js, OpenAI, ChatGPT, T3 Stack, and Vercel. Explore my personal projects, in-depth blogs, and join my live Coding Hour where we delve into the intricacies of Next.js, React and the Typescript ecosystem"
+          content="Building AirBNB frontend and answering questions about NextJS, React,TailwindCSS, Typescript, Javascript tRPC, Typescript"
         />
 
         <meta
           name="keywords"
-          content="Marcin Cebula, Full Stack Developer, Indie Hacker, Node.js, React, Next.js, tRPC, T3, Vercel, PostgreSQL, ChatGPT, OpenAI, TypeScript, Live Coding, Programming Blog, Tech Projects"
-        /> */}
+          content="Marcin Cebula, AirBNB Clone, T3 Stack, Full Stack Developer, Indie Hacker, Node.js, React, Next.js, tRPC, T3, Vercel, PostgreSQL, ChatGPT, OpenAI, TypeScript, Live Coding, Programming Blog, Tech Projects"
+        />
 
         <meta name="robots" content="all" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,6 +30,34 @@ export default function Document() {
         <link rel="mask-icon" href="/favicon.ico" color="#FFFFFF" />
 
         {/* - Open Graph tags for social media  */}
+        <meta
+          property="og:title"
+          content="Marcin Cebula: Full Stack Dev, Indie Hacker and Twitch Streamer"
+        />
+        <meta
+          property="og:description"
+          content="Building AirBNB frontend and answering questions about NextJS, React,TailwindCSS, Typescript, Javascript tRPC, Typescript"
+        />
+        <meta
+          property="og:image"
+          content="https://airbnb.marcincebula.com/card.jpg"
+        />
+        <meta property="og:url" content="https://airbnb.marcincebula.com" />
+
+        {/* - Twitter tags for social media  */}
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:title"
+          content="Marcin Cebula: Full Stack Dev, Indie Hacker and Twitch Streamer"
+        />
+        <meta
+          name="twitter:description"
+          content="Building AirBNB frontend and answering questions about NextJS, React,TailwindCSS, Typescript, Javascript tRPC, Typescript"
+        />
+        <meta
+          name="twitter:image"
+          content="https://airbnb.marcincebula.com/card.jpg"
+        />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
