@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.catCSS {
-  @apply col-span-12 flex h-64 flex-col border border-slate-200 p-2 md:col-span-6 lg:col-span-4 xl:col-span-3;
+.defaultContainerPadding {
+  @apply px-8;
+}
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
 }
