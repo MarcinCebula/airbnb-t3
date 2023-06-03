@@ -23,7 +23,7 @@ import Image from "next/image";
 
 export const HomeFeature = () => {
   return (
-    <div className="container mx-auto max-w-full bg-white 2xl:max-w-7xl">
+    <div className="container mx-auto max-w-full bg-white">
       <div className="flex flex-col items-center justify-start space-y-0">
         <Banner />
         <MainNavigationMenu />
@@ -57,9 +57,7 @@ export const Footer = () => (
       <div className="flex cursor-pointer flex-col items-center justify-center space-y-1 border-b-2 border-white pb-2 text-slate-400 hover:border-slate-500">
         <UserCircleIcon className="h-6 w-6" />
         <span className="text-xs leading-tight">Log in</span>
-      </div> 
-      
-
+      </div>
     </div>
 
     {/* Desktop */}
@@ -112,94 +110,98 @@ export const Footer = () => (
 );
 
 export const ContentBody = () => (
-  <div className="defaultContainerPadding flex flex-col py-3">
-    {/* Grid */}
-    <div className="grid grid-cols-12 gap-x-4 gap-y-6">
-      {[...(Array(20) as number[])].map((e, i) => (
-        <div
-          key={`listing-${i}`}
-          className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3"
-        >
-          <div className="flex flex-col items-start justify-start space-y-2">
-            <img
-              className="aspect-square rounded-lg"
-              src="https://a0.muscache.com/im/pictures/miso/Hosting-659600087552092324/original/45fe0ffd-7569-4bad-8ccc-620d0a625c65.jpeg?im_w=720"
-              alt="property featured photo"
-            />
-            <div className="flex w-full flex-col items-start justify-start space-y-1 px-1 text-xs">
-              {/* Description */}
-              <div className="flex w-full flex-row space-x-1">
-                <div className="flex-1">
-                  <div className="font-bold leading-tight text-sm lg:text-xs">
-                    Wansan-gu, Jeonju, South Korea
-                  </div>
-                  <div className="flex flex-col space-y-0">
-                    <div className="font-base font-light leading-tight text-slate-500">
-                      1,318 Miles Away
+  <div className="container mx-auto max-w-7xl">
+    <div className="defaultContainerPadding max-7x-xl  flex flex-col py-3">
+      {/* Grid */}
+      <div className="grid grid-cols-12 gap-x-4 gap-y-6">
+        {[...(Array(20) as number[])].map((e, i) => (
+          <div
+            key={`listing-${i}`}
+            className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3"
+          >
+            <div className="flex flex-col items-start justify-start space-y-2">
+              <img
+                className="aspect-square rounded-lg"
+                src="https://a0.muscache.com/im/pictures/miso/Hosting-659600087552092324/original/45fe0ffd-7569-4bad-8ccc-620d0a625c65.jpeg?im_w=720"
+                alt="property featured photo"
+              />
+              <div className="flex w-full flex-col items-start justify-start space-y-1 px-1 text-xs">
+                {/* Description */}
+                <div className="flex w-full flex-row space-x-1">
+                  <div className="flex-1">
+                    <div className="text-sm font-bold leading-tight lg:text-xs">
+                      Wansan-gu, Jeonju, South Korea
                     </div>
-                    <div className="font-base font-light leading-tight text-slate-500">
-                      June 24 - 29
+                    <div className="flex flex-col space-y-0">
+                      <div className="font-base font-light leading-tight text-slate-500">
+                        1,318 Miles Away
+                      </div>
+                      <div className="font-base font-light leading-tight text-slate-500">
+                        June 24 - 29
+                      </div>
+                    </div>
+                    <div className="font-base font-bold leading-tight text-slate-500">
+                      $210 USD
+                      <span className="font-light"> night</span>
                     </div>
                   </div>
-                  <div className="font-base font-bold leading-tight text-slate-500">
-                    $210 USD
-                    <span className="font-light"> night</span>
-                  </div>
-                </div>
 
-                {/* Rating */}
-                <div className="flex w-auto flex-col">
-                  <div className="flex flex-row items-center space-x-0.5">
-                    <StarIcon className="h-3 w-3" />
-                    <span className="text-xs font-light">4.96</span>
+                  {/* Rating */}
+                  <div className="flex w-auto flex-col">
+                    <div className="flex flex-row items-center space-x-0.5">
+                      <StarIcon className="h-3 w-3" />
+                      <span className="text-xs font-light">4.96</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 );
 
 export const SecondaryNavigationMenu = () => (
-  <div className="defaultContainerPadding sticky top-16 z-10 flex h-20 w-full items-end justify-between border-b bg-white lg:h-24">
-    <div className="flex w-full flex-row items-center space-x-2">
-      <div className="relative flex-1 overflow-hidden">
-        <div className="absolute left-0 flex h-full w-auto flex-col items-center bg-white/80 pl-2 pr-4 backdrop-blur-[1px]">
-          <button className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-white">
-            <ChevronLeftIcon className="h-5 w-5 text-slate-800" />
-          </button>
-        </div>
-        <div className="absolute right-0 flex h-full w-auto flex-col items-center bg-white/80 pl-4 pr-2 backdrop-blur-[1px]">
+  <div className="container mx-auto max-w-7xl">
+    <div className="defaultContainerPadding sticky top-16 z-10 flex h-20 w-full items-end justify-between border-b bg-white lg:h-24 ">
+      <div className="flex w-full flex-row items-center space-x-2">
+        <div className="relative flex-1 overflow-hidden">
+          <div className="absolute left-0 flex h-full w-auto flex-col items-center bg-white/80 pl-2 pr-4 backdrop-blur-[1px]">
+            <button className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-white">
+              <ChevronLeftIcon className="h-5 w-5 text-slate-800" />
+            </button>
+          </div>
+          <div className="absolute right-0 flex h-full w-auto flex-col items-center bg-white/80 pl-4 pr-2 backdrop-blur-[1px]">
+            {/* INTERESTING */}
+            <button className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-white">
+              <ChevronRightIcon className="h-5 w-5 text-slate-800" />
+            </button>
+          </div>
           {/* INTERESTING */}
-          <button className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-white">
-            <ChevronRightIcon className="h-5 w-5 text-slate-800" />
+          <div className="hideScrollbar flex w-full flex-row items-center justify-start space-x-6 overflow-x-scroll">
+            {[...(Array(20) as number[])].map((e, i) => (
+              <div
+                key={i}
+                className="flex cursor-pointer flex-col items-center justify-center space-y-2 border-b-2 border-white pb-2 text-slate-600 hover:border-slate-500"
+              >
+                <HomeModernIcon className="h-6 w-6" />
+                <span className="text-xs leading-tight">Camping</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mb-4 hidden h-full w-auto items-center justify-center pl-2 lg:flex">
+          <button
+            type="button"
+            className="flex flex-row items-center space-x-2 rounded-lg border border-slate-300 px-3 py-2 shadow-slate-100 hover:shadow-md"
+          >
+            <AdjustmentsHorizontalIcon className="h-3 w-3 text-slate-800" />
+
+            <div className="text-xs font-medium">Filter</div>
           </button>
         </div>
-        {/* INTERESTING */}
-        <div className="hideScrollbar flex w-full flex-row items-center justify-start space-x-6 overflow-x-scroll">
-          {[...(Array(20) as number[])].map((e, i) => (
-            <div
-              key={i}
-              className="flex cursor-pointer flex-col items-center justify-center space-y-2 border-b-2 border-white pb-2 text-slate-600 hover:border-slate-500"
-            >
-              <HomeModernIcon className="h-6 w-6" />
-              <span className="text-xs leading-tight">Camping</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="mb-4 hidden h-full w-auto items-center justify-center pl-2 lg:flex">
-        <button
-          type="button"
-          className="flex flex-row items-center space-x-2 rounded-lg border border-slate-300 px-3 py-2 shadow-slate-100 hover:shadow-md"
-        >
-          <AdjustmentsHorizontalIcon className="h-3 w-3 text-slate-800" />
-
-          <div className="text-xs font-medium">Filter</div>
-        </button>
       </div>
     </div>
   </div>
